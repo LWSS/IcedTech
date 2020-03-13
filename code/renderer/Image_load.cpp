@@ -182,6 +182,7 @@ void idImage::GenerateImage( const byte *pic, int width, int height, textureFilt
 		return;
 	}
 
+	assert( pic != 0 );
 	idBinaryImage im( GetName() );
 	im.Load2DFromMemory( width, height, pic, opts.numLevels, opts.format, opts.colorFormat, opts.gammaMips );
 

@@ -122,9 +122,6 @@ void rvmVirtualTextureSystem::RunFeedbackJob(idImage *feedbackImage) {
 
 		idMaterial *material = virtualMaterials[pageSource];
 
-        if( !material )// lwss- is this a HACK? was getting nullptr deref
-            continue;
-
 		updatedMaterials.AddUnique(material);
 
 		// Transcode the albedo virtual image.

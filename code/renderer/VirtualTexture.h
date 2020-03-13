@@ -100,6 +100,9 @@ ID_INLINE void UnpackFeedbackPixel(feedbackPixel_t &pixel, int &pageX, int &page
 	pageY = Float16ToFloat(pixel.data[1]);
 	pageSource = Float16ToFloat(pixel.data[2]);
 	pageLOD = Float16ToFloat(pixel.data[3]);
+
+	assert( pageSource >= 0 && pageSource < MAXVIRTUALMATERIALS );
+	assert( pageLOD >= 0 && pageSource < VIRTUALTEXTURE_MAXMIPS );
 }
 
 //
